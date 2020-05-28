@@ -15,13 +15,19 @@
 .wrapper{
   padding: 0 1.5em;
 }
- .title__h1{
-    // border: 1px solid red;
-    font-size: 2.6em;
+@mixin title{
+   font-size: 2.6em;
     color: $DarkBlue;
     font-weight: 300;
     line-height: 1.2;
     margin: 10px 0 .5em;
+}
+ .title{
+   &__h1{
+     @include title;
+   }
+    
+ 
     }
 
 .copy{

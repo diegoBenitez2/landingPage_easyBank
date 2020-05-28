@@ -1,0 +1,67 @@
+.footer{
+  background: $DarkBlue;
+  color: $White;
+  padding: 2em 0;
+  svg{
+    display: block;
+    margin: 15px auto 40px;
+  }
+ &__social{
+   display: flex;
+   justify-content: center;
+ }
+ .button{
+   display: block;
+   margin: 0 auto 30px;
+
+ }
+ &__link{
+   text-align: center;
+      margin: 40px 0 ;
+   a{
+   display: block;
+   color: $LightGrayish;
+   text-decoration: none;
+   margin-bottom: 20px;
+   font-weight: 300;
+   font-size: 1.1em;
+   }
+
+ }
+ &__copyrigth{
+   text-align: center;
+   color: $GrayishBlue;
+   font-size: 300;
+ }
+
+@mixin icon{
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  background-repeat: no-repeat;
+  margin: 0 8px;
+}
+
+.icon{
+ &__facebook{
+   background: url(../images/icon-facebook.svg);
+   @include icon;
+ }
+ &__youtube{
+   background: url(../images/icon-youtube.svg);
+   @include icon;
+ }
+ &__twitter{
+   background: url(../images/icon-twitter.svg);
+   @include icon;
+ }
+ &__pinterest{
+   background: url(../images/icon-pinterest.svg);
+   @include icon;
+ }
+ &__instagram{
+   background: url(../images/icon-instagram.svg);
+   @include icon;
+ }
+}
+}

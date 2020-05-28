@@ -1,16 +1,20 @@
 .why{
   text-align: center;
   background-color: $LightGrayish;
-  padding:  4em 0;
-  .title__h1{
-    font-size: 2.1em;
-    padding: 0 .5em;
+  padding:  4em 0 ;
+  .title{
+
+    &__h1{
+      @include title;
+      font-size: 2.1em;
+      padding: 0 .5em;
+    }
+    &__h2{
+      @include title;
+      font-size: 1.5em;
+      margin-top: 1em;
   }
-  .title__h2{
-    @extend .title__h1;
-    font-size: 1.5em;
-    margin-top: 1em;
-}
+  }
 .why__grid .copy{
   margin-bottom: 2em;
 }
