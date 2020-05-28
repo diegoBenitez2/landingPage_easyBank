@@ -1,0 +1,39 @@
+.lastArticles{
+  // border: 1px solid red;
+  text-align: center;
+  padding: 5em 0;
+  background-color: $VeryLightGray;
+    &__grid{
+      display: grid;
+      grid-row-gap: 2em;
+    }
+  &__item{
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: initial;
+    background-color: $White;
+    padding-bottom: 2em;
+      &__content{
+        margin: 0 2em;
+      }
+    img{
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 1.5em;
+    }
+    .title__h3{
+      font-size: 1.1em;
+      font-weight: 400;
+      margin: .5em 0;
+      color: $DarkBlue;
+    }
+      
+    small{
+      font-size: .7em;
+    }
+    .copy{
+      font-size: .88em;
+      line-height: 1.3;
+    }
+  }
+}

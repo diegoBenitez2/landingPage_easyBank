@@ -1,0 +1,39 @@
+.hero{
+  padding-bottom: 6em;
+  text-align: center;
+    .copy{
+    margin: 0 0 2em;
+    }
+  &__images{
+    // border:1px solid red;
+    height: 300px;
+    background: url('../images/image-mockups.png')15px -115px  no-repeat,url('../images/bg-intro-mobile.svg') 0 no-repeat;
+    background-size: 327px , cover;
+  }
+}
+ 
+.wrapper{
+  padding: 0 1.5em;
+}
+ .title__h1{
+    // border: 1px solid red;
+    font-size: 2.6em;
+    color: $DarkBlue;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0 .5em;
+    }
+
+.copy{
+  line-height: 1.7;
+  font-weight: 400;
+}
+.button{
+  border: 0;
+  padding: .9em 2.2em;
+  font-size: 1em;
+  color: $White;
+  border-radius: 1.3em;
+  background-image: linear-gradient(to right , $LimeGreen 0%,$BrighCyan);
+  font-weight: bold;
+}
