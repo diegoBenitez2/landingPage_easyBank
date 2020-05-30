@@ -1,7 +1,7 @@
 .why{
   text-align: center;
   background-color: $LightGrayish;
-  border: 1px solid black;
+  // border: 1px solid black;
   padding:  4em 0 ;
   .title{
 
@@ -25,7 +25,7 @@
 }
 @media screen and(min-width: 768px){
     text-align: left;
-    border: 1px solid red;
+    // border: 1px solid red;
     &__grid{
       display: grid;
       grid-column-gap: 1em;;

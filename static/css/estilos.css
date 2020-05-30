@@ -10,7 +10,8 @@ body {
   padding: 1.2em 0;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: relative; }
   .header__logo {
     align-self: center; }
   .header .button {
@@ -29,7 +30,9 @@ body {
 
 .menu {
   display: none;
-  list-style: none; }
+  list-style: none;
+  padding: 0;
+  margin: 0; }
   .menu__button {
     width: 30px;
     height: 40px;
@@ -39,6 +42,32 @@ body {
     text-decoration: none;
     color: #9698a6;
     padding: 0 .8em; }
+  .menu__checkbox {
+    display: none; }
+    .menu__checkbox:checked ~ .menu__button {
+      background: url("../images/icon-close.svg") center no-repeat; }
+    .menu__checkbox:checked ~ .menu {
+      display: block;
+      position: absolute;
+      padding: 1em;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, #2d314d 0%, transparent 90%); }
+      .menu__checkbox:checked ~ .menu .menu__item:first-of-type a {
+        padding-top: 2em;
+        border-radius: .5em .5em 0 0; }
+      .menu__checkbox:checked ~ .menu .menu__item:last-of-type a {
+        padding-bottom: 2em;
+        border-radius: 0 0 .5em .5em; }
+      .menu__checkbox:checked ~ .menu a {
+        background: white;
+        padding: .8em 1em;
+        display: block;
+        color: #2d314d;
+        font-size: 1.1em;
+        text-align: center; }
   @media screen and (min-width: 1024px) {
     .menu {
       display: flex; }
@@ -96,9 +125,10 @@ body {
 
 .wrapper {
   padding: 0 1.5em;
-  max-width: 1115px;
+  max-width: calc(1115px + 3em);
   margin: auto;
-  width: 100%; }
+  width: 100%;
+  box-sizing: border-box; }
 
 .title__h1 {
   font-size: 2.6em;
@@ -123,7 +153,6 @@ body {
 .why {
   text-align: center;
   background-color: #f3f4f6;
-  border: 1px solid black;
   padding: 4em 0; }
   .why .title__h1 {
     font-size: 2.6em;
@@ -147,8 +176,7 @@ body {
     margin: 0 0 4em 0; }
   @media screen and (min-width: 768px) {
     .why {
-      text-align: left;
-      border: 1px solid red; }
+      text-align: left; }
       .why__grid {
         display: grid;
         grid-column-gap: 1em;
@@ -210,7 +238,8 @@ body {
     display: block;
     margin: 15px auto 40px; }
   .footer__social {
-    display: flex; }
+    display: flex;
+    justify-content: center; }
   .footer .button {
     display: block;
     margin: 0 auto; }
@@ -263,10 +292,10 @@ body {
     display: inline-flex;
     background-repeat: no-repeat;
     margin: 0 8px; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 877px) {
     .footer .wrapper {
       display: grid;
-      grid-column-gap: 7em;
+      grid-column-gap: 1em;
       grid-template-columns: 200px 1fr 400px;
       grid-template-areas: "logo link button" "social link copyrigth"; }
     .footer__link {
@@ -286,3 +315,6 @@ body {
     .footer__copyrigth {
       grid-area: copyrigth;
       text-align: right; } }
+  @media screen and (min-width: 1024px) {
+    .footer .wrapper {
+      grid-column-gap: 7em; } }

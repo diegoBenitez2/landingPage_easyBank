@@ -8,7 +8,7 @@
   }
  &__social{
    display: flex;
-  //  justify-content: center;
+   justify-content: center;
  }
  .button{
    display: block;
@@ -64,11 +64,11 @@
    @include icon;
  }
 }
-@media screen and(min-width:768px){
+@media screen and(min-width:877px){
   
   .wrapper{
     display: grid;
-    grid-column-gap: 7em;
+    grid-column-gap: 1em;
     grid-template-columns: 200px 1fr 400px;
     grid-template-areas: "logo link button"
     "social link copyrigth";
@@ -99,6 +99,12 @@
   &__copyrigth{
     grid-area: copyrigth;
     text-align: right;
+  }
+}
+@media screen and(min-width:1024px){
+  .wrapper{
+    grid-column-gap: 7em;
+
   }
 }
 }
