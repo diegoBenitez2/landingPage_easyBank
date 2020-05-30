@@ -1,6 +1,7 @@
 .why{
   text-align: center;
   background-color: $LightGrayish;
+  border: 1px solid black;
   padding:  4em 0 ;
   .title{
 
@@ -22,4 +23,19 @@
 .copy{
   margin:0 0 4em 0;
 }
+@media screen and(min-width: 768px){
+    text-align: left;
+    border: 1px solid red;
+    &__grid{
+      display: grid;
+      grid-column-gap: 1em;;
+      grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and(min-width: 1024px){
+  &__grid{
+      grid-template-columns: repeat(4,1fr);
+  }
+}
+
 }

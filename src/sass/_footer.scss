@@ -2,17 +2,17 @@
   background: $DarkBlue;
   color: $White;
   padding: 2em 0;
-  svg{
+  &__logo{
     display: block;
     margin: 15px auto 40px;
   }
  &__social{
    display: flex;
-   justify-content: center;
+  //  justify-content: center;
  }
  .button{
    display: block;
-   margin: 0 auto 30px;
+   margin: 0 auto;
 
  }
  &__link{
@@ -63,5 +63,42 @@
    background: url(../images/icon-instagram.svg);
    @include icon;
  }
+}
+@media screen and(min-width:768px){
+  
+  .wrapper{
+    display: grid;
+    grid-column-gap: 7em;
+    grid-template-columns: 200px 1fr 400px;
+    grid-template-areas: "logo link button"
+    "social link copyrigth";
+  }
+  &__link{
+    display: grid;
+    margin: 0;
+    grid-area: link;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: start;
+  }
+  &__logo{
+
+    margin: initial;
+    grid-area: logo;
+  } 
+  &__social{
+  
+    grid-area: social;
+    
+  }
+  &__button{
+  
+    grid-area: button;
+    text-align: right;
+  }
+   
+  &__copyrigth{
+    grid-area: copyrigth;
+    text-align: right;
+  }
 }
 }

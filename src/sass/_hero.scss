@@ -10,10 +10,71 @@
     background: url('../images/image-mockups.png')15px -115px  no-repeat,url('../images/bg-intro-mobile.svg') 0 no-repeat;
     background-size: 327px , cover;
   }
+  @media screen and (min-width:768px){
+      text-align: left;
+      padding-bottom: 0;
+      background: url('../images/bg-intro-desktop.svg') right -500px top -240px no-repeat;
+      background-size: cover;
+
+      &__content{
+        border: 1px solid red;
+        display: grid;
+        align-items: center;
+        grid-template-areas: "description images";
+        grid-template-columns: 480px  1fr;
+        min-height: 550px;
+       } 
+       &__images{
+         grid-area: images;
+         min-height: inherit;
+        //  background: none;
+        position: absolute;
+        border: 1px solid green;
+        background:url('../images/image-mockups.png') right -107px top -100px/95%  no-repeat;
+        width: 660px;
+        height: 768px;
+        right: 0;
+
+
+       }
+       &__description{
+        border: 1px solid blue;
+
+       }
+      
+
+
+
+  }
+   @media screen and (min-width: 1024px){
+      background: url('../images/bg-intro-desktop.svg') right -500px top -240px no-repeat;
+    &__content{
+      position: static;
+      border: 10px solid pink;
+    }
+    &__images{
+        background:url('../images/image-mockups.png') right -107px top -100px/95%  no-repeat;
+        background-size: 100%;
+        width: 660px;
+        height: 768px;
+        left: 100px;
+        top:0;
+
+
+       }
+  }
+
+        
+
+
 }
  
 .wrapper{
   padding: 0 1.5em;
+  max-width: 1115px;
+  margin: auto;
+  width:100%;
+  // box-sizing: border-box;
 }
 @mixin title{
    font-size: 2.6em;
