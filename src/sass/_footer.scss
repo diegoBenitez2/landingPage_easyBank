@@ -11,10 +11,13 @@
    justify-content: center;
  }
  .button{
+  @include button;
    display: block;
    margin: 0 auto;
-
  }
+    
+
+   
  &__link{
    text-align: center;
       margin: 40px 0 ;
@@ -25,6 +28,9 @@
    margin-bottom: 20px;
    font-weight: 300;
    font-size: 1.1em;
+   &:hover{
+     color: $BrighCyan;
+   }
    }
 
  }
@@ -40,6 +46,7 @@
   display: inline-flex;
   background-repeat: no-repeat;
   margin: 0 8px;
+ 
 }
 
 .icon{
@@ -82,23 +89,31 @@
   }
   &__logo{
 
-    margin: initial;
+    margin-left: 30px;
     grid-area: logo;
+    justify-content: center;
   } 
   &__social{
-  
-    grid-area: social;
+   grid-area: social;
+   justify-content: center;
+    a:hover{
+    color: $BrighCyan;
+  }
     
   }
   &__button{
-  
     grid-area: button;
     text-align: right;
+    .button{
+      margin: 10px 0 0 230px;
+    }
+    
   }
    
   &__copyrigth{
     grid-area: copyrigth;
     text-align: right;
+    margin: 0;
   }
 }
 @media screen and(min-width:1024px){

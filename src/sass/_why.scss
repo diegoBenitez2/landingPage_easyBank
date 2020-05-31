@@ -6,7 +6,8 @@
   .title{
 
     &__h1{
-      @include title;
+
+      @include title; 
       font-size: 2.1em;
       padding: 0 .5em;
     }
@@ -16,11 +17,17 @@
       margin-top: 1em;
   }
   }
+  @mixin copy{
+    line-height: 1.7;
+    font-size: 1.1em;
+  }
 .why__grid .copy{
+  @include copy;
   margin-bottom: 2em;
 }
 
-.copy{
+.copy_title{
+  @include copy;
   margin:0 0 4em 0;
 }
 @media screen and(min-width: 768px){
@@ -35,6 +42,10 @@
 @media screen and(min-width: 1024px){
   &__grid{
       grid-template-columns: repeat(4,1fr);
+  }
+  .copy_title{
+    width: 50.6%;
+
   }
 }
 

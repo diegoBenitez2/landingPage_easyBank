@@ -8,8 +8,12 @@
     &__logo{
       align-self: center;
     }
+   
     .button{
+      @include button;
       display: none;
+     
+
     }
     &__content{
       display: flex;

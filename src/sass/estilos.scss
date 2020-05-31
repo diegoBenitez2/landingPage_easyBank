@@ -15,7 +15,34 @@ body{
   margin: 0;
   color: $GrayishBlue;
  } 
-
+ .wrapper{
+  padding: 0 1.5em;
+  max-width: calc(1115px + 1.5em);
+  margin: auto;
+  width:100%;
+  box-sizing: border-box;
+}
+@mixin title{
+   font-size: 2.6em;
+    color: $DarkBlue;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0 .5em;
+}
+ @mixin button{
+      border: 0;
+      padding: .9em 2.2em;
+      font-size: 1em;
+      color: $White;
+      border-radius: 1.3em;
+      background-image: linear-gradient(to right , $LimeGreen 0%,$BrighCyan);
+      font-weight: bold;
+      cursor: pointer;
+      &:hover{
+        opacity: .6;;
+        
+      }
+    }
 @import './header';
 @import './menu';
 @import './hero';

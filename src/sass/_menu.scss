@@ -30,8 +30,11 @@
         left: 0;
         right: 0;
         height: 100vh;
+        z-index: 3;
         background: linear-gradient(to bottom, $DarkBlue 0%, transparent 90%);
         .menu__item{
+          margin: 0;
+
           &:first-of-type a{
             padding-top: 2em;
             border-radius: .5em .5em 0 0;
@@ -49,6 +52,8 @@
           color: $DarkBlue;
           font-size: 1.1em;
           text-align: center;
+          margin: 0; 
+          border: 0;
         }
       }
     }
@@ -60,6 +65,12 @@
     }
     &__button{
       display: none;
+    }
+    &.menu{
+      & a:hover{
+          color: $DarkBlue;
+      }
+          
     }
   }
 

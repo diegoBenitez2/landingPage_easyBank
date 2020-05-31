@@ -1,27 +1,37 @@
 .hero{
   padding-bottom: 6em;
   text-align: center;
+  text-align: center;
+  background: $LightGrayish;
+
+  .button{
+    @include button;
+  }
     .copy{
-    margin: 0 0 2em;
-    }
+      line-height: 1.7;
+      font-weight: 400;
+}
   &__images{
-    // border:1px solid red;
+    position: relative;
     height: 300px;
-    background: url('../images/image-mockups.png')15px -115px  no-repeat,url('../images/bg-intro-mobile.svg') 0 no-repeat;
-    background-size: 327px , cover;
+    background: url('../images/image-mockups.png') bottom no-repeat,url('../images/bg-intro-mobile.svg') 0 no-repeat;
+    background-size: 345px , cover;
+    margin-bottom: 1.2em;
   }
   @media screen and (min-width:768px){
       text-align: left;
       padding-bottom: 0;
-      background: url('../images/bg-intro-desktop.svg') right -500px top -240px no-repeat;
-      background-size: cover;
+      background: url('../images/bg-intro-desktop.svg') right -500px top -285px no-repeat;
+      background-size: 100%;
+      min-height: 550px;
+      box-sizing: border-box;
 
       &__content{
-        border: 1px solid red;
+        position: relative;
         display: grid;
         align-items: center;
         grid-template-areas: "description images";
-        grid-template-columns: 480px  1fr;
+        grid-template-columns: 1fr 1fr;
         min-height: 550px;
        } 
        &__images{
@@ -29,78 +39,59 @@
          min-height: inherit;
         //  background: none;
         position: absolute;
-        border: 1px solid green;
+        // border: 1px solid green;
         background:url('../images/image-mockups.png') right -107px top -100px/95%  no-repeat;
         width: 660px;
         height: 768px;
         right: 0;
-
+        top: 0;
 
        }
        &__description{
-        border: 1px solid blue;
-
+         grid-area: description;
+        // border: 1px solid blue;
+        width: 348px;
        }
+
+  }
       
     
 
 
-  }
    @media screen and (min-width: 1024px){
-      background: url('../images/bg-intro-desktop.svg') right -500px top -240px no-repeat;
+      // background: url('../images/bg-intro-desktop.svg') right -500px top -240px no-repeat;
     &__content{
-      position: static;
-      border: 10px solid pink;
+      // border: 10px solid pink;
     }
     &__images{
-        background:url('../images/image-mockups.png') right -107px top -100px/95%  no-repeat;
-        background-size: 100%;
+        background:url('../images/image-mockups.png') right 0 top -108px no-repeat;
+        background-size: 99%;
         width: 660px;
         height: 768px;
-        left: 100px;
-        top:0;
-
-
+        left: 150px;
+        right: 0;
+        top: 0;
        }
+
+       
+
+
   }
+
+
+
+ .title{
+   &__h1{
+     @include title;
+   }
+    }
+
+    
+ 
+
 
         
 
 
 }
  
-.wrapper{
-  padding: 0 1.5em;
-  max-width: calc(1115px + 3em);
-  margin: auto;
-  width:100%;
-  box-sizing: border-box;
-}
-@mixin title{
-   font-size: 2.6em;
-    color: $DarkBlue;
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 10px 0 .5em;
-}
- .title{
-   &__h1{
-     @include title;
-   }
-    
- 
-    }
-
-.copy{
-  line-height: 1.7;
-  font-weight: 400;
-}
-.button{
-  border: 0;
-  padding: .9em 2.2em;
-  font-size: 1em;
-  color: $White;
-  border-radius: 1.3em;
-  background-image: linear-gradient(to right , $LimeGreen 0%,$BrighCyan);
-  font-weight: bold;
-}
